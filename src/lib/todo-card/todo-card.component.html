@@ -1,0 +1,23 @@
+<mat-card [class.done]="todo.done">
+  <mat-card-content>
+    <p>{{ todo.text }}</p>
+  </mat-card-content>
+  <mat-card-actions align='end'>
+    <button
+      (click)="onToggleDone()"
+      mat-icon-button
+    >
+      @if (todo.done) {
+        <mat-icon>check_box</mat-icon>
+      } @else {
+        <mat-icon>check_box_outline_blank</mat-icon>
+      }
+    </button>
+    <button
+      (click)="onDelete()"
+      mat-icon-button
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
